@@ -1041,7 +1041,7 @@ mod tests {
         assert_eq!(0f64.abs_sub(&INFINITY), 0f64);
     }
 
-    #[test] #[ignore(cfg(windows))] // FIXME #8663
+    #[test]
     fn test_abs_sub_nowin() {
         assert!(NAN.abs_sub(&-1f64).is_nan());
         assert!(1f64.abs_sub(&NAN).is_nan());
@@ -1153,7 +1153,7 @@ mod tests {
         assert_eq!((-0f64).frexp(), (-0f64, 0));
     }
 
-    #[test] #[ignore(cfg(windows))] // FIXME #8755
+    #[test]
     fn test_frexp_nowin() {
         let inf: f64 = Float::infinity();
         let neg_inf: f64 = Float::neg_infinity();
